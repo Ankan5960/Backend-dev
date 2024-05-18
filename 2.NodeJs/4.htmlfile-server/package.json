@@ -1,0 +1,12 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "basic html file hosting",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankan Maity",
+  "license": "ISC"
+}
