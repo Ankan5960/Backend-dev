@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Javascript Quote Generator</h2>
+        </div>
+
+        <div class="main-content">
+            <div class="text-area">
+                <div class="qoute" id="qoute">
+                    'To err is human; to forgive, divine.'
+
+                </div>
+            </div>
+            <div id="author">"Alexander <br>Pope"</div>
+            <div class="button">
+                <button id="new-qoute">New Quote</button>
+            </div>
+        </div>
+    </div>
+    <style>
+            *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: black;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        h2{
+            height: 30px;
+            width: 350px;
+            background-color: rgb(50, 42, 42);
+            color: rgb(153, 156, 159);
+            margin-left: 80px;
+            border: 2px solid white;
+            border-radius: 5px; 
+        }
+        .main-content{
+            background-color: rgb(209, 213, 217);
+            padding: 50px;
+            margin-top: 15px;
+            margin-left: 20px;
+            border-radius: 5px;
+            height: 250px;
+            width:465px
+        }
+        .qoute{
+            margin-top: 20px;
+            height:50px;
+            width: 350px;
+        }
+        #author{
+            margin-top: 25px;
+            font-size: x-large;
+            height: 50px;
+            color: brown;
+        }
+        #new-qoute{
+            margin-top: 10px;
+            background-color: rgb(50, 42, 42);
+            color:aliceblue;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid rgb(109, 107, 107);
+        }
+    </style>
+    <script>
+        const qoute=document.querySelector('#qoute')
+        const author=document.getElementById('author')
+        const btn=document.getElementById('new-qoute')
+
+        const arr=[{
+            qoute: `'Three can keep a secret, if two of them are dead.'`,
+            author:`"Benjamin <br> Franklin"`
+        }, {
+            qoute: `'Tis better to have loved and lost than never to have loved at all.'`,
+            author:`"Alfred Lord <br> Tennyson"`
+        }, {
+            qoute: `'Three can keep a secret, if two of them are dead.'`,
+            author:`"Alfred Lord <br> Tennyson"`
+        }, {
+            qoute: `'To be or not to be, that is the question.'`,
+            author:`"William <br> Shakespeare"`
+        }, {
+            qoute:`'Go ahead, make my day.'`,
+            author:`"Harry Callahan"`
+        }, {
+            qoute:`'He travels the fastest who travels alone.'`,
+            author:`"Rudyard Kipling"`
+        }, {
+            qoute:`'I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.'`,
+            author:`"Martin Luther King"`
+        }, {
+            qoute:"'If at first you don't succeed, try, try again.'",
+            author:`"W. E. Hickson"`
+        }, {
+            qoute:`'If you are going through hell, keep going.'`,
+            author:`"Winston Churchill"`
+        }, {
+            qoute:`'If you want something done right, do it yourself.'`,
+            author:`"Charles-Guillaume Étienne"`
+        }
+        ]
+        btn.addEventListener('click', function(){
+            let random= Math.floor(Math.random() * arr.length)
+            qoute.innerText=arr[random].qoute;
+            author.innerHTML=arr[random].author;
+        })
+    </script>
+    
+</body>
+</html>

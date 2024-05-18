@@ -1,0 +1,4 @@
+
+on each path of this folder need to package.json files 
+to implement this json file run "npm init"
+and files the details.
