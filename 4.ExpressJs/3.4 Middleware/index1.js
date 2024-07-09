@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 //morgan is a middle ware
 // app.use(morgan('tiny'));
-app.use(bodyParser.json());
+
 
 //custom middleware. 
 function bandNameGenerator(req,res,next){
